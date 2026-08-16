@@ -29,19 +29,29 @@
         .hero-image-wrapper { flex-shrink: 0; display: flex; justify-content: center; align-items: center; }
         .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #06b6d4; box-shadow: 0 0 25px rgba(6, 182, 212, 0.25); }
 
-        /* GRAPHICAL STATS SECTION */
+        /* TECHNICAL COMPETENCIES & PROOF-OF-WORK SECTION */
         .skills-stats-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .stat-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 1.5rem; }
-        .stat-card h3 { color: #fff; font-size: 1.1rem; margin: 0 0 1rem 0; display: flex; justify-content: space-between; align-items: center; }
-        .stat-card h3 span { color: #06b6d4; font-weight: 700; font-size: 0.95rem; }
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .tech-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 1.75rem; }
+        .tech-card h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.75rem 0; display: flex; align-items: center; gap: 0.75rem; }
+        .tech-card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.25rem; }
         
-        .progress-bar-bg { background: #030712; border: 1px solid #1e293b; height: 10px; border-radius: 5px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; background: linear-gradient(90deg, #06b6d4, #3b82f6); border-radius: 5px; transition: width 1s ease-in-out; }
-        
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tech-tag { background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); color: #06b6d4; font-size: 0.78rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 6px; }
+
         .metrics-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; margin-top: 2.5rem; text-align: center; }
         .metric-number { font-size: 2.2rem; font-weight: 800; color: #06b6d4; margin-bottom: 0.25rem; }
         .metric-label { color: #94a3b8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+
+        /* PROJECT HIGHLIGHTS & CASE STUDIES */
+        .projects-section { max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .project-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
+        .project-card h3 { color: #fff; font-size: 1.25rem; margin: 0 0 0.5rem 0; font-weight: 700; }
+        .project-card .category-badge { color: #06b6d4; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; display: inline-block; }
+        .project-card p { color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .project-card ul { color: #94a3b8; font-size: 0.88rem; padding-left: 1.2rem; margin-bottom: 1.5rem; line-height: 1.5; }
+        .project-card ul li { margin-bottom: 0.4rem; }
     </style>
 </head>
 <body>
@@ -80,42 +90,52 @@
         </div>
     </section>
 
-    <!-- GRAPHICAL STATS SECTION -->
+    <!-- TECHNICAL COMPETENCIES & VERIFIED TOOLKIT -->
     <section class="skills-stats-section">
         <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 1.5rem;">
-            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Technical Proficiency & Analytics Metrics</h2>
-            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Quantitative overview of technical capabilities across data engineering, modeling, and visualization workflows.</p>
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Core Analytics Capabilities & Stack</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Concrete engineering and visualization tools applied across my end-to-end analytics projects.</p>
         </div>
 
-        <!-- GRAPHICAL SKILL BARS -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <h3><i class="fas fa-database" style="color: #06b6d4;"></i> SQL & Relational Databases <span>92%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 92%;"></div></div>
+        <div class="tech-grid">
+            <!-- CARD 1 -->
+            <div class="tech-card">
+                <h3><i class="fas fa-database" style="color: #06b6d4;"></i> Relational SQL Databases</h3>
+                <p>Constructing multi-table JOINs, subqueries, CTEs, and window functions to query, clean, and structure raw data pipelines.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">CTEs & Window Functions</span>
+                    <span class="tech-tag">Query Optimization</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <h3><i class="fab fa-python" style="color: #06b6d4;"></i> Python Analytics & ML <span>88%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
+
+            <!-- CARD 2 -->
+            <div class="tech-card">
+                <h3><i class="fab fa-python" style="color: #06b6d4;"></i> Python Analytics & ML</h3>
+                <p>Wrangling tabular data, performing exploratory statistical analysis, and modeling customer retention/churn behaviors.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">Scikit-Learn</span>
+                    <span class="tech-tag">Matplotlib & Seaborn</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <h3><i class="fas fa-chart-pie" style="color: #06b6d4;"></i> Power BI Modeling <span>90%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
-            </div>
-            <div class="stat-card">
-                <h3><i class="fas fa-chart-line" style="color: #06b6d4;"></i> Tableau Server Dashboards <span>85%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
-            </div>
-            <div class="stat-card">
-                <h3><i class="fas fa-file-excel" style="color: #06b6d4;"></i> Advanced Excel & DAX <span>95%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
-            </div>
-            <div class="stat-card">
-                <h3><i class="fas fa-project-diagram" style="color: #06b6d4;"></i> Data Pipeline Optimization <span>87%</span></h3>
-                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 87%;"></div></div>
+
+            <!-- CARD 3 -->
+            <div class="tech-card">
+                <h3><i class="fas fa-chart-pie" style="color: #06b6d4;"></i> Business Intelligence & Dashboards</h3>
+                <p>Designing intuitive, interactive business intelligence reports with custom DAX calculations, parameters, and drill-throughs.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Tableau Server</span>
+                    <span class="tech-tag">DAX Measures</span>
+                    <span class="tech-tag">Star Schema Modeling</span>
+                </div>
             </div>
         </div>
 
-        <!-- KEY STATISTICAL HIGHLIGHTS BANNER -->
+        <!-- KEY QUANTITATIVE METRICS BANNER -->
         <div class="metrics-banner">
             <div>
                 <div class="metric-number">25+</div>
@@ -136,66 +156,55 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section style="max-width: 1140px; margin: 60px auto; padding: 0 20px; font-family: system-ui, -apple-system, sans-serif;">
+    <!-- FEATURED PROOF OF WORK / CASE STUDIES -->
+    <section class="projects-section">
         <div style="border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem; margin-bottom: 2rem;">
-            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Recommendations & Stakeholder Endorsements</h2>
-            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Feedback from industry leads, operational directors, and cross-functional teams on analytical delivery.</p>
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 700; margin: 0;">Featured Analytical Case Studies</h2>
+            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0.25rem 0 0 0;">Demonstrated problem-solving workflows covering business intelligence, predictive modeling, and ETL optimization.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-            
-            <!-- TESTIMONIAL 1 -->
-            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
-                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
-                    "Shayantha has an exceptional ability to restructure raw, unorganized inventory and operational datasets into streamlined, automated dashboards. His Power BI implementation cut down our weekly reporting overhead drastically."
-                </p>
-                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
-                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #06b6d4; color: #030712; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
-                        AH
-                    </div>
-                    <div>
-                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Anwar Hossain</h4>
-                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Operations Lead | Accessories & Garments Sector</p>
-                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Chittagong, Bangladesh</p>
-                    </div>
+        <div class="project-grid">
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <div>
+                    <span class="category-badge">Predictive Analytics</span>
+                    <h3>Customer Churn Reduction Framework</h3>
+                    <p>Designed a machine learning workflow to identify key churn drivers and predict customer attrition risk across subscriber segments.</p>
+                    <ul>
+                        <li>Cleaned and engineered features across 7,000+ customer records in Python.</li>
+                        <li>Built an interactive Power BI risk evaluation canvas for executive reporting.</li>
+                    </ul>
                 </div>
+                <a href="/case-studies/" style="color: #06b6d4; font-weight: 700; text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">Read Case Study <i class="fas fa-arrow-right"></i></a>
             </div>
 
-            <!-- TESTIMONIAL 2 -->
-            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
-                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
-                    "Working with Shayantha on machine learning workflows and data cleaning pipelines in Python was seamless. He pays strict attention to detail and writes clean, well-documented, modular code."
-                </p>
-                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
-                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #3b82f6; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
-                        SR
-                    </div>
-                    <div>
-                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Syedur Rahman</h4>
-                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Senior Data Engineer | Tech Analytics Hub</p>
-                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Dhaka, Bangladesh</p>
-                    </div>
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div>
+                    <span class="category-badge">Retail & Operations</span>
+                    <h3>Walmart Sales Demand & Forecasting</h3>
+                    <p>Evaluated multi-department historical distributions to isolate seasonal sales variations and project regional demand trends.</p>
+                    <ul>
+                        <li>Formulated relational SQL queries to aggregate departmental sales metrics.</li>
+                        <li>Constructed a Tableau analytics dashboard tracking time-series overlays.</li>
+                    </ul>
                 </div>
+                <a href="/case-studies/" style="color: #06b6d4; font-weight: 700; text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">Read Case Study <i class="fas fa-arrow-right"></i></a>
             </div>
 
-            <!-- TESTIMONIAL 3 -->
-            <div style="background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
-                <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; font-style: italic;">
-                    "His deep understanding of relational SQL databases and marketing attribution models transformed how we evaluate channel ROI. Shayantha delivers actionable, executive-ready insights every single time."
-                </p>
-                <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; align-items: center; gap: 1rem;">
-                    <div style="width: 42px; height: 42px; border-radius: 50%; background: #10b981; color: #030712; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem;">
-                        TC
-                    </div>
-                    <div>
-                        <h4 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0;">Tanvir Chowdhury</h4>
-                        <p style="color: #06b6d4; font-size: 0.8rem; margin: 0.15rem 0 0 0; font-weight: 600;">Digital Strategy Consultant | Retail Insights Group</p>
-                        <p style="color: #64748b; font-size: 0.75rem; margin: 0;">Remote Analytics Partner</p>
-                    </div>
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <div>
+                    <span class="category-badge">BI & Data Architecture</span>
+                    <h3>Interactive BI Dashboard Catalog</h3>
+                    <p>Production-ready catalog of structured data dashboards across e-commerce, sales tracking, and operational efficiency metrics.</p>
+                    <ul>
+                        <li>Implemented star-schema data models and optimized DAX calculations.</li>
+                        <li>Fully documented codebases published directly on GitHub repositories.</li>
+                    </ul>
                 </div>
+                <a href="/dashboard-gallery/" style="color: #06b6d4; font-weight: 700; text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;">Inspect Dashboards <i class="fas fa-arrow-right"></i></a>
             </div>
-
         </div>
     </section>
 
